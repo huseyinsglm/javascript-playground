@@ -1,0 +1,623 @@
+<!doctype html>
+<html class="no-js" lang="" style="background-color: rgb(100 200 200);">
+
+<head>
+  <meta charset="utf-8">
+  <title> JAVASCRIPT PROJECT</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<!-- Add your site or application content here -->
+<p>Hello world! This is JAVASCRIPT project.</p>
+
+<script>
+  console.log('hello world');
+  document.write(10 + 12);
+</script>
+<p>deneme</p>
+<button type="button" onclick="document.write(20+20)" style="background-color: cadetblue">DENE</button>
+
+<script>
+  // window.alert('her an değişebilir sayfa');
+  console.log('dikkat acemi yazılımcı');
+</script>
+<h2>The window.print() Method</h2>
+<p>Sayfayı yazdırmak için lütfen butona basınız.</p>
+<button onclick="window.print()" style="background-color: cadetblue">Bu sayfayı yazdır</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="total"></p>
+<p id="process"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="carpma"></p>
+<p id="ekleme"></p>
+<p id="text"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="multiplication"></p>
+<p id="degree"></p>
+<p id="carName"></p>
+<p id="carModel"></p>
+<p id="person"></p>
+
+<button onClick="displayDate()" style="background-color: cadetblue">SAAT KAÇ?</button>
+<p id="clock"></p>
+
+<button onclick="myFunctionTry()" style="background-color: cadetblue"> bunu dene</button>
+<p id="demo11"> Lütfen Microsoft'u ziyaret edin</p>
+
+<button onclick="myFunctionUpper()" style="background-color: cadetblue">dene</button>
+<p id="demo12">Hello World!</p>
+
+<button onclick="myFunctionLower()" style="background-color: cadetblue">DENE</button>
+<p id="demo13"> HELLO WORLD!</p>
+
+<p id="demo14"></p>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p id="demo17"></p>
+<p id="demo18"></p>
+<p id="demo19"></p>
+<p id="demo20"></p>
+
+<button onclick="setHelloMessage()" style="background-color: cadetblue"> setHelloMessage</button>
+<p id="demo21"></p>
+
+
+<script>
+  let x, y, z;
+  x = 5;
+  y = 4;
+  z = x + y;
+  document.getElementById("demo").innerHTML = "z değeri = " + z;
+
+  let a1, b1, c1;
+  a1 = 5;
+  b1 = 6;
+  c1 = a1 + b1;
+  document.getElementById("demo1").innerHTML = c1;
+
+  var person = "John Doe", carName = "Volvo", price = 200;
+  document.getElementById("demo3").innerHTML = carName + price;
+
+  var firstName =
+    document.getElementById("demo4").innerHTML = firstName;
+
+  var x2 = 5 + 2 + 3;
+  document.getElementById("total").innerHTML = x2;
+
+  var y2 = 10 + 2 * 20 / 5;
+  document.getElementById("process").innerHTML = y2;
+
+  var x3 = "3" + 9 + 5;
+  document.getElementById("demo5").innerHTML = x3;
+
+  var x4 = 2;
+  var x5 = 10;
+  document.getElementById("demo6").innerHTML = x4;
+
+  carName = "BMW";
+  document.getElementById("demo7").innerHTML = carName;
+  carName = "Volvo";
+
+  const cars = ["Saab", "Volvo", "BMW"];
+  cars[0] = "Toyota";
+  cars.push("Audi");
+  document.getElementById("demo8").innerHTML = cars;
+
+  let a2 = 12;
+  let b2 = 4;
+  let c2 = a2 * b2;
+  document.getElementById("carpma").innerHTML = c2;
+
+  let h = 10;
+  h += 8;
+  document.getElementById("ekleme").innerHTML = h;
+  let text1 = "hüseyin";
+  let text2 = "sağlam";
+  let text3 = text1 + " " + text2;
+  document.getElementById("text").innerHTML = text3;
+
+  let e = 3;
+  let k = (100 + 50) * e;
+  let f = k / e;
+  document.getElementById("demo9").innerHTML = k;
+  document.getElementById("demo10").innerHTML = f;
+
+  let o = myFunction(9, 3);
+  document.getElementById("multiplication").innerHTML = o;
+
+  function myFunction(m, n) {
+    return m * n;
+  }
+
+
+  function toCelsius(f) {
+    return (5 / 9) * (f - 32);
+  }
+
+  document.getElementById("degree").innerHTML = toCelsius(77);
+
+  let car = "BMW";
+  document.getElementById("carName").innerHTML = car;
+
+  const cart = {type: "Ford", model: "Focus", color: "white"};
+  document.getElementById("carModel").innerHTML = "Aracın modeli " + cart.type;
+
+  const persons = {firstName: "Hüseyin", lastName: "SAĞLAM", age: 29, eyeColor: "hazel"};
+  document.getElementById("person").innerHTML =
+    persons.firstName + " " + persons.age + " " + "yaşında";
+
+  function displayDate() {
+    document.getElementById("clock").innerHTML = Date();
+  }
+
+  function myFunctionTry() {
+    let text = document.getElementById("demo11").innerHTML;
+    document.getElementById("demo11").innerHTML =
+      text.replace("Microsoft", "W3Schools");
+  }
+
+  function myFunctionUpper() {
+    let text = document.getElementById("demo12").innerHTML;
+    document.getElementById("demo12").innerHTML =
+      text.toUpperCase();
+  }
+
+  function myFunctionLower() {
+    let text = document.getElementById("demo13").innerHTML;
+    document.getElementById("demo13").innerHTML =
+      text.toLowerCase();
+  }
+
+  /*let text = "merhaba dünya";
+  document.getElementById("demo14").innerHTML = text.charAt(5);
+
+  let i = 5;
+  for (var i = 0; i < 10; i++) {
+  }
+  document.getElementById("demo15").innerHTML = i;*/
+
+  let sayi = " ";
+  let s = 0;
+  while (s < 10) {
+    sayi += "<br>sayı" + s;
+    s++;
+    console.log(s)
+  }
+  document.getElementById("demo16").innerHTML = sayi;
+
+  var v, p;
+  var q = 7;
+  for (p = 0; p < 7; p++) {
+    for (v = 0; v < q; v++) {
+      document.write("*");
+      document.write(" ");
+    }
+    document.write("<br>");
+    q--;
+  }
+
+  //star ex.
+  var m, j, ö;
+  for (m = 8; 0 < m; m--) {
+    for (j = m; j <= 8; j++) {
+      document.write(".");
+    }
+    for (ö = 0; ö <= m - 2; ö++) {
+      document.write("*");
+      document.write(" ");
+    }
+    document.write("<br>");
+    m--;
+  }
+
+
+  /*let name="hüseyin";
+  let surname="saglam";
+  if(name=="hüseyin")
+    {if (surname == "saglam") {
+      document.write("Evet aradığımız kişiyi bulduk!");}
+    else
+    {document.write("isim doğru ama soyisim yanlış!");}}
+  else
+  { document.write("isim yanlış!");}
+
+   */
+
+  var day;
+  switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+      day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case  6:
+      day = "Saturday";
+  }
+  document.getElementById("demo17").innerHTML = "Today is " + day;
+
+  var result = "";
+  for (var d = 10; d < 20; d++) {
+    result = result + "şu anki d değeri" + d + "</br>";
+  }
+  document.getElementById("demo19").innerHTML = result;
+
+
+  document.getElementById("demo20").innerHTML =
+    typeof "john" + "<br>" +
+    typeof 3.14 + "<br>" +
+    typeof NaN + "<br>" +
+    typeof false + "<br>" +
+    typeof [1, 2, 3, 4] + "<br>" +
+    typeof {name: 'hüseyin', age: 29} + "<br>" +
+    typeof new Date() + "<br>" +
+    typeof function () {
+    } + "<br>" +
+    typeof myCar + "<br>" +
+    typeof null;
+
+  function setHelloMessage() {
+    document.getElementById("demo21").innerHTML = getHelloMessage("en");
+  }
+
+  function getHelloMessage(languageCode) {
+    if (languageCode === "tr") {
+      return "Merhaba Dünya";
+    } else {
+      return "Hello World!";
+    }
+  }
+
+  var lesson = [" XHTML ", " JAVASCRİPT "];
+  var openLesson = [" HTML5 ", " MYSQL"];
+
+  for (var l = 0; l < lesson.length; l++) {
+    document.write(lesson[l]);
+  }
+  document.write("<br>");
+  for (var m = 0; m < openLesson.length; m++) {
+    document.write(openLesson[m]);
+  }
+  document.write("<br>");
+  document.write(lesson.join());
+  document.write("<br>");
+  document.write(openLesson.join());
+  document.write("<br>");
+  document.write(openLesson.concat(lesson));
+  document.write("<br>");
+  document.write(lesson.concat(openLesson));
+  document.write("<br>");
+  let toplam = [...lesson, ...openLesson];
+  var lastLesson = openLesson.concat(lesson);
+  document.write(toplam.reverse());
+  document.write("<br>");
+  let city = [" bursa ", " istanbul ", " kocaeli ", " eskişehir ", " ankara "];
+  for (let f = 0; f < city.length; f++) {
+    document.write(city[f]);
+  }
+  document.write("<br>");
+  document.write(city.sort());
+  document.write("<br>");
+  city.pop();
+  document.write(city.sort());
+  document.write("<br>");
+  city.push("trabzon");
+  document.write(city);
+  document.write("<br>");
+  city.push("muş");
+  document.write(city);
+  document.write("<br>");
+
+  /*let g=prompt("enter new value");
+  document.write(g);
+document.write("<br>");
+
+  let list=[];
+  for (p=1;p<4;p++){
+    let o=prompt("please"+p+"enter command");
+    list[p]=o;
+  }
+  document.write(list.join());*/
+
+  document.write("<br>");
+
+  function deleteArrayElement(array, index) {
+    if (index > array.length) {
+      console.log("index array uzunluğundan büyüktür!");
+      return array;
+    }
+    let array2 = []
+
+    for (i = 0; i < array.length; i++) {
+      if (index !== i) {
+        array2.push(array[i]);
+      }
+    }
+    return array2;
+  }
+
+  let arr = ["ali", "veli", 0, 1, "hasan"]
+  let result1 = deleteArrayElement(arr, 3);
+  document.write(result1);
+
+  let arrayNumber = ["kahve", "bardak", "top"];
+  console.log(turnNumber(arrayNumber));
+
+  function turnNumber(array) {
+    let array2 = [];
+    for (let i = 0; i < array.length; i++) {
+
+      if (typeof array[i] == "number") {
+        array2.push(array[i]);
+      }
+    }
+    return array2;
+  }
+
+  let arraystring = ["ankara", 10, "başkent", 6, "anıtkabir"]
+  console.log(turnString(arraystring));
+
+  function turnString(array) {
+    let array3 = [];
+    for (let i = 0; i < array.length; i++) {
+      if (typeof array[i] == "string") {
+        array3.push(array[i]);
+      }
+    }
+    return array3;
+  }
+
+  let arrayLetters = ["l", "m", "a", "h", "e"]
+  turnLetters(arrayLetters);
+
+  function turnLetters(letters) {
+    let vowels = ["a", "e", "ı", "i", "o", "ö", "u", "ü"]
+    for (let i = 0; i < letters.length; i++) {
+      for (let j = 0; j < vowels.length; j++) {
+        if (letters[i] === vowels[j]) {
+          console.log(letters[i]);
+        }
+      }
+    }
+  }
+
+
+  let arrayLetters1 = ["l", "m", "a", "h", "e"]
+  turnConsonant(arrayLetters1);
+
+  function turnConsonant(letters) {
+    let vowels = ["a", "e", "ı", "i", "o", "ö", "u", "ü"]
+    for (let i = 0; i < letters.length; i++) {
+      let isVowel = vowels.includes(arrayLetters[i]);
+      if (isVowel === false) {
+        console.log(letters[i]);
+      }
+    }
+  }
+
+  doubleCount();
+
+  function doubleCount() {
+    let number = [];
+    for (let number = 0; number < 22; number++) {
+      if ((number % 2 === 0)) {
+        console.log(number);
+      }
+
+    }
+    return number;
+  }
+
+  star(4);
+
+  function star(count) {
+    let result = "";
+    for (let number = 0; number < count; number++) {
+      result = result + "*" + " ";
+      console.log(result);
+    }
+    for (let number = count - 1; number > 0; number--) {
+      let result2 = "";
+      for (let i = 0; i < number; i++) {
+        result2 = result2 + "*" + " ";
+      }
+      result = result.substring(0, number);
+      console.log(result2);
+    }
+  }
+
+  document.write("<br>");
+  addNumbers(["ali", "kemal", "saglam", 1, 9, 7]);
+
+  function addNumbers(array) {
+    let result = 0;
+    for (let index = 0; index < array.length; index++) {
+      if (typeof array[index] === "number") {
+        result = result + array[index];
+      }
+    }
+    document.write(result + " ");
+  }
+
+  function calculateRectangularArea(shortEdge, longEdge) {
+    let area = shortEdge * longEdge;
+    return area;
+  }
+
+  function calculateRectangularPerimeter(shortEdge, longEdge) {
+    let perimeter = 2 * (shortEdge + longEdge);
+    return perimeter;
+  }
+
+  function calculateAreaSquare(edge) {
+    let area = edge * edge;
+    return area;
+  }
+
+  function calculatePerimeterSquare(edge) {
+    let perimeter = 4 * edge;
+    return perimeter;
+  }
+
+  function circleArea(radius) {
+    let pi = 3.14;
+    let area = pi * radius * radius;
+    return area;
+  }
+
+  function circleGirth(radius) {
+    let pi = 3.14;
+    let girth = 2 * (pi * radius);
+    return girth;
+  }
+
+  function triangularHypotenuse(shortEdge, longEdge) {
+    let hypotenuseSquare = shortEdge * shortEdge + longEdge * longEdge;
+    let hypotenuse = Math.sqrt(hypotenuseSquare);
+    return hypotenuse;
+  }
+
+  testCalculations();
+
+  function testCalculations() {
+
+    console.log("area of square=" + calculateAreaSquare(4) + ", parameter=4, expectedValue=16");
+    console.log("perimeter of square=" + calculatePerimeterSquare(5) + ", parameter=5, expectedValue=20");
+
+    console.log("area of rectangular=" + calculateRectangularArea(3, 4) + ", parameter=3,4, expectedValue=12");
+    console.log("perimeter of rectangular=" + calculateRectangularPerimeter(3, 4) + ", parameter=3,4, expectedValue=14");
+
+    console.log("area of circle=" + circleArea(5) + ", parameter=5, expectedValue=78,5");
+    console.log("perimeter of circle=" + circleGirth(5) + ", parameter=5, expectedValue=31,4");
+
+    console.log("hypotenuse of triangular=" + triangularHypotenuse(3, 4) + ", parameter=3,4, expectedValue=5");
+
+  }
+
+  writeName();
+
+  function writeName() {
+    let jsonName = [{"name": "hüseyin", "surname": "saglam"}, {"name": "ali", "surname": "saglam"}];
+    for (let i = 0; i < jsonName.length; i++) {
+      console.log(jsonName[i].name + " " + jsonName[i].surname);
+    }
+  }
+
+  writeGenderFemale();
+
+  function writeGenderFemale() {
+
+    let jsonFamily = [{"name": "ali", "gender": "male"}, {"name": "ezgi", "gender": "female"}];
+
+    for (let i = 0; i < jsonFamily.length; i++) {
+
+      if (jsonFamily[i].gender === "female") {
+        console.log(jsonFamily[i].name);
+      }
+    }
+  }
+
+  writeGenderMale();
+
+  function writeGenderMale() {
+    let jsonFamily = [{"name": "ali", "gender": "male"}, {"name": "ezgi", "gender": "female"}];
+    for (let i = 0; i < jsonFamily.length; i++) {
+      if (jsonFamily[i].gender === "male") {
+        console.log(jsonFamily[i].name);
+      }
+    }
+  }
+
+
+  let myPersonList = [
+    {"name": "ali", "gender": "male"},
+    {"name": "ezgi", "gender": "female"},
+    {"name": "hüseyin", "gender": "male"}
+  ];
+  let maleGenders = getMaleGendersFromList(myPersonList);
+  console.log(maleGenders);
+
+  function getMaleGendersFromList(personList) {
+    let maleGenderList = [];
+    for (let i = 0; i < personList.length; i++) {
+      if (personList[i].gender === "male") {
+        maleGenderList.push(personList[i]);
+      }
+    }
+    return maleGenderList;
+  }
+  document.write("<br>");
+  document.write("continue");
+
+
+  
+
+
+</script>
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/hello.js"></script>
+<script src="js/calculationFactorial.js"></script>
+<script src="js/welcomeMessage.js"></script>
+<script src="js/horoscope.js"></script>
+<script src="js/addition.js"></script>
+<script src="js/message.js"></script>
+
+
+
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

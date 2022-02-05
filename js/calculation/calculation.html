@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>calculation box</title>
+</head>
+<body>
+
+<div style="text-align: center">
+  <h1>HESAP MAKİNESİ</h1>
+
+  <div style="display: flex;
+    flex-wrap: wrap;
+    justify-content: center">
+    <div style="text-align: initial;display: grid">
+      <div><label>sayı1 :</label></div>
+      <div><label>sayı2 :</label></div>
+      <div><label>İşlem</label></div>
+
+    </div>
+    <div style="text-align: initial">
+      <input type="number" id="sy1" name="sy1" placeholder="sayı girin"><label id="validation1"
+                                                                               style="color:red"></label><br><br>
+      <input type="number" id="sy2" name="sy2" placeholder="sayı girin"><label id="validation2"
+                                                                               style="color:red"></label><br><br>
+
+      <select id="chooseProcess">
+        <option value="?">Bir işlem seçin</option>
+        <option value="+">toplama</option>
+        <option value="-">çıkartma</option>
+        <option value="*">çarpma</option>
+        <option value="/">bölme</option>
+      </select><label id="validation3" style="color:red"></label><br><br>
+      <button type="button" onclick="calculate()">Hesapla</button>
+      <button onclick="remove()" type="reset">Sil</button>
+      <br><br>
+      <div style="display: flex">
+        <p> Result =
+        <p id="result" style="color:green"></p></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="calculation.js"></script>
+
+</div>
+</body>
+</html>
